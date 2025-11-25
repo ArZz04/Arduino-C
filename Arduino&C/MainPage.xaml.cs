@@ -36,7 +36,7 @@ namespace Arduino_C
 
                 foreach (var d in devices)
                 {
-                    if (d.Name.Contains("(COM8)"))   // <-- Aquí coincide EXACTO con tu captura
+                    if (d.Name.Contains("(COM9)"))   // <-- Aquí coincide EXACTO con tu captura
                     {
                         com9 = d;
                         break;

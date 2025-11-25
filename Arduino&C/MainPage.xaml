@@ -12,7 +12,7 @@
         <!-- Header -->
         <StackPanel Background="#1A1F2E" Height="80" VerticalAlignment="Top">
             <TextBlock 
-                Text="Arduino Control"
+                Text="Arduino Control | ARQUITECTURA COMPUTADORAS | ISC TSJ 2025"
                 FontSize="28"
                 FontWeight="Bold"
                 Foreground="White"
