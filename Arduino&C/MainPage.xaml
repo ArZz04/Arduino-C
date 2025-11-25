@@ -1,0 +1,125 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Class="Arduino_C.MainPage"
+    Background="#F8F9FA">
+
+    <Grid>
+
+        <!-- Header -->
+        <StackPanel Background="#1A1F2E" Height="80" VerticalAlignment="Top">
+            <TextBlock 
+                Text="Arduino Control"
+                FontSize="28"
+                FontWeight="Bold"
+                Foreground="White"
+                Margin="32,20,0,0"/>
+        </StackPanel>
+
+        <!-- Main Content -->
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,80,0,10">
+            <StackPanel Spacing="24" Padding="32">
+
+                <!-- Status Card -->
+                <Border 
+                    Background="White"
+                    CornerRadius="12"
+                    Padding="24"
+                    BorderThickness="1"
+                    BorderBrush="#E2E8F0">
+
+                    <Grid RowSpacing="8">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock 
+                            Text="Estado del Sistema"
+                            FontSize="16"
+                            FontWeight="SemiBold"
+                            Foreground="#1A202C"/>
+
+                        <!-- STATUS BOX -->
+                        <Border 
+                            Background="#F0F9FF"
+                            CornerRadius="8"
+                            Padding="12,8"
+                            BorderThickness="1"
+                            BorderBrush="#BAE6FD"
+                            Grid.Row="1">
+
+                            <StackPanel Spacing="4">
+
+                                <TextBlock 
+                                    x:Name="StatusIndicator"
+                                    Text="Estado: Desconectado"
+                                    FontSize="14"
+                                    Foreground="#0369A1"/>
+
+                                <TextBlock 
+                                    x:Name="LastContactText"
+                                    Text="Último contacto: N/A"
+                                    FontSize="12"
+                                    Foreground="#06B6D4"/>
+
+                            </StackPanel>
+                        </Border>
+
+                        <TextBlock 
+                            Text="Conexión establecida a través de puerto serial"
+                            FontSize="12"
+                            Foreground="#64748B"
+                            Grid.Row="2"
+                            TextWrapping="Wrap"/>
+                    </Grid>
+
+                </Border>
+
+                <!-- Control Section -->
+                <StackPanel Spacing="12">
+                    <TextBlock 
+                        Text="Controles Principales"
+                        FontSize="16"
+                        FontWeight="SemiBold"
+                        Foreground="#1A202C"/>
+
+                    <Grid ColumnSpacing="12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button 
+                            Content="Encender"
+                            Grid.Column="0"
+                            Height="120"
+                            Background="#10B981"
+                            Foreground="White"
+                            FontSize="18"
+                            FontWeight="SemiBold"
+                            CornerRadius="12"
+                            Click="BtnOn_Click" Width="593"/>
+
+                        <Button 
+                            Content="Apagar"
+                            Grid.Column="1"
+                            Height="120"
+                            Background="#EF4444"
+                            Foreground="White"
+                            FontSize="18"
+                            FontWeight="SemiBold"
+                            CornerRadius="12"
+                            Click="BtnOff_Click" Width="570"/>
+                    </Grid>
+                </StackPanel>
+
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</Page>
